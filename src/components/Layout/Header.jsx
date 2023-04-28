@@ -3,17 +3,17 @@ import bfImg from '../../assets/breakfast.jpg'
 import classes from './Header.module.css'
 import HeaderButton from './HeaderButton'
 
-const Header = () => {
+const Header = (props) => {
   return (
-    <React.Fragment>
+    <>
         <header className={classes.header}>
-            <h1>Breakfast Menu</h1>
-            <HeaderButton />
+            <h1>Breakfast Club</h1>
+            <HeaderButton toggleCartHandler={props.toggleCartHandler}/>
         </header>
         <div className={classes['main-image']}>
             <img src={bfImg} alt="Breakfast Food on a table"/>
         </div>
-    </React.Fragment>
+    </>
   )
 }
 

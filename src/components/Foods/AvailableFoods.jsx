@@ -32,11 +32,11 @@ const DUMMY_BF = [
 const AvailableFoods = () => {
     const foodslist = DUMMY_BF.map(food => 
     <FoodItem 
-    id={food.id}
-    key={food.id}
-    name={food.name}
-    description={food.description}
-    price={food.price}
+      id={food.id}
+      key={food.id}
+      name={food.name}
+      description={food.description}
+      price={food.price}
     />
     ); 
 

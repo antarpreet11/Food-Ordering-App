@@ -8,10 +8,6 @@ const FoodsText = () => {
         Choose your favorite meal from our broad selection of available meals
         and enjoy a delicious breakfast at home.
       </p>
-      <p>
-        All our meals are cooked with high-quality fresh ingredients, just-in-time and
-        of course by experienced chefs!
-      </p>
     </section>
   )
 }

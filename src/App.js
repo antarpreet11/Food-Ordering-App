@@ -1,16 +1,28 @@
-import { Fragment } from 'react'
+import { useState } from 'react';
+
 import Header from './components/Layout/Header.jsx'
 import Foods from './components/Foods/Foods'
+import Cart from './components/Cart/Cart'
 
+import CartProvider from './store/CartProvider'
 
 function App() {
+  const [cartIsShown, setCartIsShown] = useState(false);
+
+  const toggleCartHandler = () => {
+    setCartIsShown(!cartIsShown);
+  }
+
   return (
-    <Fragment>
-      <Header />
+    <CartProvider>
+      {
+        cartIsShown && <Cart toggleCartHandler={toggleCartHandler}/> 
+      }
+      <Header toggleCartHandler={toggleCartHandler}/>
       <main>
-        <Foods />
+        <Foods/>
       </main>
-    </Fragment>
+    </CartProvider>
   );
 }
 

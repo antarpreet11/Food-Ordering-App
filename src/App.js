@@ -4,6 +4,7 @@ import Header from './components/Layout/Header.jsx'
 import Foods from './components/Foods/Foods'
 import Cart from './components/Cart/Cart'
 
+import CartProvider from './store/CartProvider'
 
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
@@ -13,7 +14,7 @@ function App() {
   }
 
   return (
-    <>
+    <CartProvider>
       {
         cartIsShown && <Cart toggleCartHandler={toggleCartHandler}/> 
       }
@@ -21,7 +22,7 @@ function App() {
       <main>
         <Foods/>
       </main>
-    </>
+    </CartProvider>
   );
 }
 
